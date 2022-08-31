@@ -18,6 +18,14 @@ function ShelfPage() {
     })
   }
 
+  //DELETE
+const deleteItem = (id) => {
+  dispatch({
+      type: 'DELETE_ITEM',
+      payload: id
+  })
+}
+
   return (
     <div className="container">
       <h2>Shelf</h2>
@@ -25,6 +33,7 @@ function ShelfPage() {
           <div key={item.id}>
             <img src={item.image_url}></img>
             <p>{item.description}</p>
+            <button onClick={() => deleteItem(item.id)}>Delete</button>
          </div>
       ))}
       <p>All of the available items can be seen here.</p>
