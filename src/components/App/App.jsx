@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
+import ItemForm from '../ItemForm/ItemForm';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
@@ -65,6 +66,7 @@ function App() {
             exact
             path="/shelf"
           >
+            <ItemForm />
             <ShelfPage />
           </ProtectedRoute>
 
