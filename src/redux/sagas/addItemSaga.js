@@ -1,9 +1,10 @@
 import axios from "axios";
 import { put, takeEvery } from "redux-saga/effects";
 
-function* addItem(){
+function* addItem(action){
     try {
-        yield axios.post('', action.payload);
+        yield axios.post('/api/shelf', action.payload);
+        yield put({type: 'FETCH_ITEM'});
     } catch (error) {
         console.log('Error with user registration:', error);
     };
