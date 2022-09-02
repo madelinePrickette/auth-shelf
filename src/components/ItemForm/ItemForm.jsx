@@ -17,7 +17,7 @@ function ItemForm() {
     const handleSubmit = () => {
         dispatch({
             type: 'ADD_ITEM',
-            payload: item
+            payload: newItem
         })
     }
 
